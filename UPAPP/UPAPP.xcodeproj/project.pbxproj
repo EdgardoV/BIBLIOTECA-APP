@@ -14,6 +14,7 @@
 		ED499A5720A3B70F00CF98FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED499A5520A3B70F00CF98FF /* LaunchScreen.storyboard */; };
 		ED499A6220A3B70F00CF98FF /* UPAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499A6120A3B70F00CF98FF /* UPAPPTests.swift */; };
 		ED499A6D20A3B70F00CF98FF /* UPAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499A6C20A3B70F00CF98FF /* UPAPPUITests.swift */; };
+		ED56980520B76931004E5297 /* detalle_multaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56980420B76931004E5297 /* detalle_multaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ED499A6820A3B70F00CF98FF /* UPAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED499A6C20A3B70F00CF98FF /* UPAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPAPPUITests.swift; sourceTree = "<group>"; };
 		ED499A6E20A3B70F00CF98FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED56980420B76931004E5297 /* detalle_multaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalle_multaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */,
 				ED499A4E20A3B70D00CF98FF /* ViewController.swift */,
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
+				ED56980420B76931004E5297 /* detalle_multaViewController.swift */,
 				ED499A5320A3B70F00CF98FF /* Assets.xcassets */,
 				ED499A5520A3B70F00CF98FF /* LaunchScreen.storyboard */,
 				ED499A5820A3B70F00CF98FF /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED56980520B76931004E5297 /* detalle_multaViewController.swift in Sources */,
 				ED499A4F20A3B70D00CF98FF /* ViewController.swift in Sources */,
 				ED499A4D20A3B70D00CF98FF /* AppDelegate.swift in Sources */,
 			);
