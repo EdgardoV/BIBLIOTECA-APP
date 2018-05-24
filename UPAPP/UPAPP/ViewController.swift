@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var buscador: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        multas.append("Nombre del libro de la multa 1")
+        //multas.append("Nombre del libro de la multa 1")
         multas.append("Nombre del libro de la multa 2")
         multas.append("Nombre del libro de la multa 3")
         multas.append("Nombre del libro de la multa 4")
