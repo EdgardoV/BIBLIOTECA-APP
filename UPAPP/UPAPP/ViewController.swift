@@ -30,8 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         multas.append("Nombre del libro de la multa 2")
         multas.append("Nombre del libro de la multa 3")
         multas.append("Nombre del libro de la multa 4")
-        multas_list.delegate = self
-        multas_list.dataSource = self
+        multas_list?.delegate = self
+        multas_list?.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
