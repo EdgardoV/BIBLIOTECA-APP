@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,21 +24,61 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-C1-afK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-4k-q2t">
-                                        <rect key="frame" x="120" y="52" width="135" height="53"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-4k-q2t">
+                                        <rect key="frame" x="120" y="38" width="135" height="53"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario o matricula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YC-SP-eGf">
+                                        <rect key="frame" x="65" y="99" width="245" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.65349148389101086" blue="0.2738977839540675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8YC-SP-eGf" secondAttribute="bottom" constant="9" id="4p0-P8-4mY"/>
+                                    <constraint firstItem="1gf-4k-q2t" firstAttribute="centerX" secondItem="8YC-SP-eGf" secondAttribute="centerX" id="d5l-Ul-T7i"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8YC-SP-eGf" secondAttribute="trailing" id="diu-Gq-VmB"/>
+                                    <constraint firstItem="8YC-SP-eGf" firstAttribute="top" secondItem="1gf-4k-q2t" secondAttribute="bottom" constant="8" id="jiy-85-K3S"/>
+                                    <constraint firstItem="8YC-SP-eGf" firstAttribute="leading" secondItem="TIR-C1-afK" secondAttribute="leading" constant="65" id="nEO-nM-nZW"/>
                                     <constraint firstAttribute="width" secondItem="TIR-C1-afK" secondAttribute="height" multiplier="125:43" id="vyn-G9-Soe"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McC-qi-es0">
                                 <rect key="frame" x="0.0" y="739" width="375" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daq-dI-Rm1">
+                                        <rect key="frame" x="19" y="9" width="29" height="29"/>
+                                        <state key="normal" backgroundImage="informacion_ico"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-Ag-wwZ">
+                                        <rect key="frame" x="88" y="7" width="31" height="31"/>
+                                        <state key="normal" backgroundImage="calendar_ico"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X61-xl-dlP">
+                                        <rect key="frame" x="320" y="5" width="36" height="38"/>
+                                        <state key="normal" backgroundImage="history_ico"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG9-oD-aSa">
+                                        <rect key="frame" x="256" y="5" width="42" height="36"/>
+                                        <state key="normal" backgroundImage="multa_ico"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.6534914839" blue="0.27389778399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="daq-dI-Rm1" firstAttribute="top" secondItem="McC-qi-es0" secondAttribute="top" constant="9" id="4qY-kL-cC4"/>
+                                    <constraint firstItem="X61-xl-dlP" firstAttribute="top" secondItem="McC-qi-es0" secondAttribute="top" constant="5" id="9Do-nE-UFS"/>
+                                    <constraint firstAttribute="trailing" secondItem="X61-xl-dlP" secondAttribute="trailing" constant="19" id="9dW-CT-xi6"/>
+                                    <constraint firstItem="eo6-Ag-wwZ" firstAttribute="leading" secondItem="daq-dI-Rm1" secondAttribute="trailing" constant="40" id="Cpo-om-rgQ"/>
                                     <constraint firstAttribute="width" secondItem="McC-qi-es0" secondAttribute="height" multiplier="375:73" id="Pxd-jj-QpN"/>
+                                    <constraint firstAttribute="bottom" secondItem="daq-dI-Rm1" secondAttribute="bottom" constant="35" id="Vka-qJ-InA"/>
+                                    <constraint firstItem="daq-dI-Rm1" firstAttribute="leading" secondItem="McC-qi-es0" secondAttribute="leading" constant="19" id="XMQ-cI-znD"/>
+                                    <constraint firstItem="eo6-Ag-wwZ" firstAttribute="bottom" secondItem="daq-dI-Rm1" secondAttribute="bottom" id="ZT7-4X-h3E"/>
+                                    <constraint firstItem="FG9-oD-aSa" firstAttribute="baseline" secondItem="X61-xl-dlP" secondAttribute="baseline" id="f7z-cT-VUo"/>
+                                    <constraint firstItem="eo6-Ag-wwZ" firstAttribute="centerY" secondItem="FG9-oD-aSa" secondAttribute="centerY" id="gwX-xn-oiR"/>
+                                    <constraint firstAttribute="bottom" secondItem="X61-xl-dlP" secondAttribute="bottom" constant="30" id="hrU-9O-f7U"/>
+                                    <constraint firstItem="X61-xl-dlP" firstAttribute="leading" secondItem="FG9-oD-aSa" secondAttribute="trailing" constant="22" id="oue-bm-qLn"/>
+                                    <constraint firstItem="FG9-oD-aSa" firstAttribute="firstBaseline" secondItem="X61-xl-dlP" secondAttribute="firstBaseline" id="rfs-Nf-587"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-jz-PIf">
@@ -47,7 +88,7 @@
                                     <constraint firstAttribute="width" secondItem="NgT-jz-PIf" secondAttribute="height" multiplier="343:498" constant="-48.901606425702823" id="JXR-ff-y0l"/>
                                 </constraints>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Buscar multa" id="mFa-g2-sZh">
+                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="prominent" placeholder="Buscar multa" id="mFa-g2-sZh">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="barTintColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,6 +158,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar_ico" width="31" height="31"/>
+        <image name="history_ico" width="36" height="36"/>
+        <image name="informacion_ico" width="29" height="29"/>
         <image name="logo" width="135" height="53"/>
+        <image name="multa_ico" width="42" height="36"/>
     </resources>
 </document>
