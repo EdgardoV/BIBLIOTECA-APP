@@ -416,9 +416,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-XH-Qor">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
-                                        <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="showDetail" id="laz-GE-Ksz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-s2-2Mb">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
@@ -637,23 +634,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKy-bX-FON">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
-                                        <connections>
-                                            <segue destination="msq-Ss-m0s" kind="showDetail" id="o01-lh-dQA"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aul-N9-tYr">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
-                                        <connections>
-                                            <segue destination="EeU-qo-9CO" kind="showDetail" id="oV3-tF-xBQ"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkp-tE-ehQ">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="zRR-Dw-pi8"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfo-xi-eAE">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -742,9 +730,6 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Ingresa"/>
-                                        <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="showDetail" id="YFx-gZ-5HO"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.6534914839" blue="0.27389778399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -795,7 +780,4 @@
         <image name="logo" width="135" height="53"/>
         <image name="multa_ico" width="42" height="36"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="YFx-gZ-5HO"/>
-    </inferredMetricsTieBreakers>
 </document>
