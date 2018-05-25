@@ -23,8 +23,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-C1-afK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="OAA-8e-hxe">
-                                        <rect key="frame" x="131" y="64" width="112" height="44"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-4k-q2t">
+                                        <rect key="frame" x="120" y="52" width="135" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
@@ -117,6 +117,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="112" height="44"/>
+        <image name="logo" width="135" height="53"/>
     </resources>
 </document>
