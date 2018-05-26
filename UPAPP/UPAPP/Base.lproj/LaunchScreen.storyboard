@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cz2-DH-Ihs">
-                                <rect key="frame" x="120" y="380" width="135" height="53"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Diseño sin título" translatesAutoresizingMaskIntoConstraints="NO" id="764-WL-n6t">
+                                <rect key="frame" x="-69" y="-11" width="512" height="823"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cz2-DH-Ihs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="336" id="QZI-a4-pcW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cz2-DH-Ihs" secondAttribute="trailing" constant="120" id="Xgp-re-VNv"/>
-                            <constraint firstItem="cz2-DH-Ihs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="kYZ-E2-VTF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cz2-DH-Ihs" secondAttribute="bottom" constant="345" id="nWG-XJ-UYS"/>
+                            <constraint firstItem="764-WL-n6t" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-69" id="9YX-Ns-Hg3"/>
+                            <constraint firstItem="764-WL-n6t" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-11" id="Cwh-lS-GNK"/>
+                            <constraint firstAttribute="trailing" secondItem="764-WL-n6t" secondAttribute="trailing" constant="-68" id="DVn-4A-1HH"/>
+                            <constraint firstAttribute="bottom" secondItem="764-WL-n6t" secondAttribute="bottom" id="yLA-5l-KdX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="135" height="53"/>
+        <image name="Diseño sin título" width="533" height="833"/>
     </resources>
 </document>
