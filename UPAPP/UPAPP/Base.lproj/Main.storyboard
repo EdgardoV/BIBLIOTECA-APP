@@ -159,16 +159,17 @@
                     <connections>
                         <outlet property="buscar_multas" destination="804-JH-Io1" id="bYW-sQ-VWu"/>
                         <outlet property="consulta_multas" destination="osp-pj-SjC" id="gzm-sP-qKG"/>
+                        <segue destination="Jwf-Xi-kfd" kind="show" id="sHz-J2-cKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301.60000000000002" y="-2840.3940886699506"/>
         </scene>
-        <!--View Controller-->
+        <!--Multa Detalle View Controller-->
         <scene sceneID="71G-pF-JhT">
             <objects>
-                <viewController id="Jwf-Xi-kfd" customClass="ViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jwf-Xi-kfd" customClass="MultaDetalleViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sid-dU-bv7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

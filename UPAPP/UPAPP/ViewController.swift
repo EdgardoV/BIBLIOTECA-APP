@@ -18,20 +18,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var handler:DatabaseHandle?
     var ref: DatabaseReference?
     var multas_lbl:[String] = []
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         
-        handler = ref?.child("multa/150009_001").observe(.childAdded, with: {(snapshot) in
-            if let item = snapshot.value!["descripcion"] as? [String : AnyObject]
-            {
-                self.multas_lbl.append(item)
+        for index in 1...50{
+        
+            handler = ref?.child("multa").child("150009/\(index)").observe(DataEventType.value, with: {(snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if value != nil{
+                    print(value)
+                }
+                let descripcion = value?["descripcion"] as? String ?? ""
+                let costo = value?["costo"] as? String ?? ""
+                let estatus = value?["estatus"] as? String ?? ""
+                let nombre_libro = value?["nombre_libro"] as? String ?? ""
+                if descripcion != ""{
+                    if estatus != "pendiente"{
+                        self.multas_lbl.append(descripcion)
+                    }
+                    
+                }
                 self.consulta_multas?.reloadData()
-            }
-        })
+            })
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
