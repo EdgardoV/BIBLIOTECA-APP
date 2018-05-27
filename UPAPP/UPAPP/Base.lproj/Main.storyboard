@@ -480,6 +480,29 @@
                                     <constraint firstItem="eDT-s2-2Mb" firstAttribute="leading" secondItem="KJU-XH-Qor" secondAttribute="trailing" constant="40" id="yXR-ej-y2P"/>
                                 </constraints>
                             </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Uq-J0u">
+                                <rect key="frame" x="24" y="157" width="327" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-R4-QPd">
+                                <rect key="frame" x="233" y="621" width="107" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleColor" red="0.99296719154345858" green="1" blue="0.98146447817679061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Busqueda Avanzada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmc-JS-b3Y">
+                                <rect key="frame" x="37" y="237" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfc-pF-Tap">
+                                <rect key="frame" x="217" y="232" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -509,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQq-LJ-ehj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-422" y="-2840"/>
+            <point key="canvasLocation" x="-423.19999999999999" y="-2840.3940886699506"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qMn-Xk-lfV">
