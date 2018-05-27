@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  UPAPP
-//
+//  
 //  Created by Edgardo Victorino Marin on 09/05/18.
 //  Copyright © 2018 Edgardo Victorino Marin. All rights reserved.
 //
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let item = snapshot.value as? String
             {
                 self.multas_lbl.append(item)
-                self.consulta_multas.reloadData()
+                self.consulta_multas?.reloadData()
             }
         })
     }
