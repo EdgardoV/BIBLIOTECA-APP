@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8956020BA443F00AC0723 /* busquedaViewController.swift */; };
 		330C732BA5C9E0A40D6960AB /* Pods_UPAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */; };
 		B0248AF929D17EFC00B2606A /* Pods_UPAPPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */; };
 		C68FF2DD089D937D1C905236 /* Pods_UPAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7B1E61E6E71223E7978F7 /* Pods_UPAPP.framework */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		06460259CA38EC5063845EAE /* Pods-UPAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP.release.xcconfig"; sourceTree = "<group>"; };
+		14C8956020BA443F00AC0723 /* busquedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = busquedaViewController.swift; sourceTree = "<group>"; };
 		1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51334CAC0E816F5954219B56 /* Pods-UPAPPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */,
 				ED499A4E20A3B70D00CF98FF /* ViewController.swift */,
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
+				14C8956020BA443F00AC0723 /* busquedaViewController.swift */,
 				ED56980C20B7DB3B004E5297 /* Assets.xcassets */,
 				ED499A5520A3B70F00CF98FF /* LaunchScreen.storyboard */,
 				ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */,
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED499A4F20A3B70D00CF98FF /* ViewController.swift in Sources */,
+				14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */,
 				ED499A4D20A3B70D00CF98FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     @IBOutlet weak var consulta_multas: UITableView!
     var handler:DatabaseHandle?
     var ref: DatabaseReference?
@@ -20,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
+        //ref = Database.database().reference()
         
         handler = ref?.child("multa/150009_001").observe(.childAdded, with: {(snapshot) in
             if let item = snapshot.value as? String
