@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330C732BA5C9E0A40D6960AB /* Pods_UPAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */; };
+		B0248AF929D17EFC00B2606A /* Pods_UPAPPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */; };
+		C68FF2DD089D937D1C905236 /* Pods_UPAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7B1E61E6E71223E7978F7 /* Pods_UPAPP.framework */; };
 		ED499A4D20A3B70D00CF98FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */; };
 		ED499A4F20A3B70D00CF98FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499A4E20A3B70D00CF98FF /* ViewController.swift */; };
 		ED499A5220A3B70D00CF98FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED499A5020A3B70D00CF98FF /* Main.storyboard */; };
@@ -16,6 +19,7 @@
 		ED56980D20B7DB3C004E5297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56980C20B7DB3B004E5297 /* Assets.xcassets */; };
 		ED56980E20B7DB3C004E5297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56980C20B7DB3B004E5297 /* Assets.xcassets */; };
 		ED56980F20B7DB3C004E5297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56980C20B7DB3B004E5297 /* Assets.xcassets */; };
+		ED84568E20B9DE7100ADB1F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06460259CA38EC5063845EAE /* Pods-UPAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP.release.xcconfig"; sourceTree = "<group>"; };
+		1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51334CAC0E816F5954219B56 /* Pods-UPAPPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBE6AE9B631738194829944 /* Pods-UPAPPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPUITests/Pods-UPAPPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C4A7B1E61E6E71223E7978F7 /* Pods_UPAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1BD8DD6C495631B785BFB74 /* Pods-UPAPPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPUITests/Pods-UPAPPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E05BA54DF26DA90688F6161E /* Pods-UPAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		ED499A4920A3B70D00CF98FF /* UPAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED499A4E20A3B70D00CF98FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,8 @@
 		ED499A6C20A3B70F00CF98FF /* UPAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPAPPUITests.swift; sourceTree = "<group>"; };
 		ED499A6E20A3B70F00CF98FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED56980C20B7DB3B004E5297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68FF2DD089D937D1C905236 /* Pods_UPAPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330C732BA5C9E0A40D6960AB /* Pods_UPAPPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0248AF929D17EFC00B2606A /* Pods_UPAPPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366A2E7F5208F1C4CD6FAF1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4A7B1E61E6E71223E7978F7 /* Pods_UPAPP.framework */,
+				1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */,
+				2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8618C8213523896F1D7BC65F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E05BA54DF26DA90688F6161E /* Pods-UPAPP.debug.xcconfig */,
+				06460259CA38EC5063845EAE /* Pods-UPAPP.release.xcconfig */,
+				51334CAC0E816F5954219B56 /* Pods-UPAPPTests.debug.xcconfig */,
+				F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */,
+				D1BD8DD6C495631B785BFB74 /* Pods-UPAPPUITests.debug.xcconfig */,
+				6BBE6AE9B631738194829944 /* Pods-UPAPPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED499A4020A3B70D00CF98FF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				ED499A6020A3B70F00CF98FF /* UPAPPTests */,
 				ED499A6B20A3B70F00CF98FF /* UPAPPUITests */,
 				ED499A4A20A3B70D00CF98FF /* Products */,
+				8618C8213523896F1D7BC65F /* Pods */,
+				366A2E7F5208F1C4CD6FAF1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +146,7 @@
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
 				ED56980C20B7DB3B004E5297 /* Assets.xcassets */,
 				ED499A5520A3B70F00CF98FF /* LaunchScreen.storyboard */,
+				ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */,
 				ED499A5820A3B70F00CF98FF /* Info.plist */,
 			);
 			path = UPAPP;
@@ -134,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED499A7120A3B70F00CF98FF /* Build configuration list for PBXNativeTarget "UPAPP" */;
 			buildPhases = (
+				5BE449FC50948FA82D130651 /* [CP] Check Pods Manifest.lock */,
 				ED499A4520A3B70D00CF98FF /* Sources */,
 				ED499A4620A3B70D00CF98FF /* Frameworks */,
 				ED499A4720A3B70D00CF98FF /* Resources */,
+				A0AD97C9FE74A644A93E0DB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED499A7420A3B70F00CF98FF /* Build configuration list for PBXNativeTarget "UPAPPTests" */;
 			buildPhases = (
+				1A450CECC48D73A5A7ED8BCD /* [CP] Check Pods Manifest.lock */,
 				ED499A5920A3B70F00CF98FF /* Sources */,
 				ED499A5A20A3B70F00CF98FF /* Frameworks */,
 				ED499A5B20A3B70F00CF98FF /* Resources */,
@@ -169,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED499A7720A3B70F00CF98FF /* Build configuration list for PBXNativeTarget "UPAPPUITests" */;
 			buildPhases = (
+				D6BFE43ACEB1D2AC24DCDE0C /* [CP] Check Pods Manifest.lock */,
 				ED499A6420A3B70F00CF98FF /* Sources */,
 				ED499A6520A3B70F00CF98FF /* Frameworks */,
 				ED499A6620A3B70F00CF98FF /* Resources */,
@@ -232,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED499A5720A3B70F00CF98FF /* LaunchScreen.storyboard in Resources */,
+				ED84568E20B9DE7100ADB1F4 /* GoogleService-Info.plist in Resources */,
 				ED56980D20B7DB3C004E5297 /* Assets.xcassets in Resources */,
 				ED499A5220A3B70D00CF98FF /* Main.storyboard in Resources */,
 			);
@@ -254,6 +302,85 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A450CECC48D73A5A7ED8BCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UPAPPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BE449FC50948FA82D130651 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UPAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0AD97C9FE74A644A93E0DB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BFE43ACEB1D2AC24DCDE0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UPAPPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED499A4520A3B70D00CF98FF /* Sources */ = {
@@ -432,16 +559,21 @@
 		};
 		ED499A7220A3B70F00CF98FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05BA54DF26DA90688F6161E /* Pods-UPAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NMBZQ6J656;
 				INFOPLIST_FILE = UPAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = evm.UPAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UPAPP.evm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,16 +581,21 @@
 		};
 		ED499A7320A3B70F00CF98FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06460259CA38EC5063845EAE /* Pods-UPAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NMBZQ6J656;
 				INFOPLIST_FILE = UPAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = evm.UPAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UPAPP.evm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,6 +603,7 @@
 		};
 		ED499A7520A3B70F00CF98FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51334CAC0E816F5954219B56 /* Pods-UPAPPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +624,7 @@
 		};
 		ED499A7620A3B70F00CF98FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +645,7 @@
 		};
 		ED499A7820A3B70F00CF98FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BD8DD6C495631B785BFB74 /* Pods-UPAPPUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +665,7 @@
 		};
 		ED499A7920A3B70F00CF98FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BBE6AE9B631738194829944 /* Pods-UPAPPUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
