@@ -25,13 +25,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         ref = Database.database().reference()
         
-        handler = ref?.child("multa/150009_001").observe(.childAdded, with: {(snapshot) in
+        /*handler = ref?.child("multa/150009_001").observe(.childAdded, with: {(snapshot) in
             if let item = snapshot.value!["descripcion"] as? [String : AnyObject]
             {
                 self.multas_lbl.append(item)
                 self.consulta_multas?.reloadData()
             }
-        })
+        })*/
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

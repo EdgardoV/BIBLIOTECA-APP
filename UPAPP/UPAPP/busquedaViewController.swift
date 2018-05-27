@@ -12,15 +12,26 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
     
     
     @IBOutlet weak var txtNombre: UISearchBar!
-    @IBOutlet weak var txtAutor: UITextField!
-    @IBOutlet weak var txtEditorial: UITextField!
-    @IBOutlet weak var texEdicion: UITextField!
+    @IBOutlet weak var txtAutor: UISearchBar!
+    @IBOutlet weak var txtEditorial: UISearchBar!
     @IBOutlet weak var lblDisp: UILabel!
+    @IBOutlet weak var texEdicion: UISearchBar!
     @IBOutlet weak var opcDisp: UISwitch!
     @IBOutlet weak var opcBusquedaA: UISwitch!
     @IBOutlet weak var lblAlert1: UILabel!
-    var Dispo = String()
+    var Dispo:String = "Si"
+    var Nombre = String()
+    var Autor = String()
+    var Editorial = String ()
+    var Edicion = String()
     
+    @IBAction func opcDispA(_ sender: UISwitch) {
+        if(opcDisp.isOn){
+            Dispo = "Si"
+        }else{
+            Dispo = "No"
+        }
+    }
     @IBAction func opcBusqueda(_ sender: UISwitch) {
         if(opcBusquedaA.isOn){
             txtAutor.isHidden = false
@@ -28,11 +39,8 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
             lblDisp.isHidden = false
             opcDisp.isHidden = false
             texEdicion.isHidden = false
-            if(opcDisp.isOn){
-                Dispo = "Si"
-            }else{
-                Dispo = "No"
-            }
+            
+            
             
         }else{
             txtAutor.isHidden = true
@@ -44,6 +52,10 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
         }
     }
     @IBAction func btnBuscar(_ sender: Any) {
+        Nombre = txtNombre.text!
+        Autor = txtAutor.text!
+        Editorial = txtEditorial.text!
+        Edicion = texEdicion.text!
         if (txtNombre.text != "" || txtAutor.text != "" || txtEditorial.text != "" || texEdicion.text != ""){
             performSegue(withIdentifier: "Cbusqueda", sender: self)
         }else{
@@ -52,11 +64,12 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var resultBusqueda = segue.destination as! ResultBusViewController
-        resultBusqueda.Nombre = txtNombre.text!
-        resultBusqueda.Autor = txtAutor.text!
-        resultBusqueda.Editorial = txtEditorial.text!
-        resultBusqueda.Autor = texEdicion.text!
+        resultBusqueda.Nombre = Nombre
+        resultBusqueda.Autor = Autor
+        resultBusqueda.Editorial = Editorial
+        resultBusqueda.Autor = Autor
         resultBusqueda.Disponibe = Dispo
+        resultBusqueda.Edicion = Edicion
     }
     
     override func viewDidLoad() {
