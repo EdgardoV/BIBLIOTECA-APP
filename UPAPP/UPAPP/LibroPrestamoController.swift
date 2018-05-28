@@ -21,6 +21,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var autor_libro: UILabel!
     @IBOutlet weak var editorial_libro: UILabel!
     @IBOutlet weak var portada_libro: UIImageView!
+    @IBOutlet weak var edicion_libro: UILabel!
     
     var libros_prestamo:[String] = []
     var nombre = String()
@@ -35,7 +36,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
         nombre_libro.isHidden = true
         autor_libro.isHidden = true
         editorial_libro.isHidden = true
-        
+        edicion_libro.isHidden = true
         for index in 1...16{
             handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: {(snapshot) in
                 let value = snapshot.value as? NSDictionary
@@ -84,19 +85,21 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     let propietario = String(value?["propietario"] as? Int ?? 0)
                     print(propietario)
                     let nombre = value?["nombre"] as? String ?? ""
-                    let fechaprestamo
-                    let fechaentrega
-                    
+                    let fechaprestamo = value?["Fecha_de_prestamo"] as? String ?? ""
+                    let fechaentrega = value?["Fecha_de_entrega"] as? String ?? ""
+                    let autor = value?["autor"] as? String ?? ""
+                    let edicion = String(value?["edicion"] as? Int ?? 0)
+                    let editorial = value?["editorial"] as? String ?? ""
                     let estatus = value?["status"] as? String ?? ""
-                    let isbn = value?["ISBN"] as? String ?? ""
                     if nombre == nombrelibro && propietario == "150794"{
                         if estatus == "prestamo"{
-                            self.diaprestamo_libro.text =
-                            self.entrega_libro.text =
-                            self.nombre_libro.text =
-                            self.autor_libro.text =
-                            self.editorial_libro.text =
-                            self.portada_libro.image = //#imageLiteral(resourceName: "libro1.jpg")
+                            self.diaprestamo_libro.text = fechaprestamo
+                            self.entrega_libro.text = fechaentrega
+                            self.nombre_libro.text = nombre
+                            self.autor_libro.text = autor
+                            self.editorial_libro.text = editorial
+                            self.edicion_libro.text = edicion
+                            self.portada_libro.image = #imageLiteral(resourceName: "libro1.jpg")
                         }
                     }
                     
