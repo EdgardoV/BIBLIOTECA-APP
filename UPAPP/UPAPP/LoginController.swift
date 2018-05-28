@@ -25,12 +25,26 @@ class LoginController: UIViewController , UITextFieldDelegate{
                 }else{
                     if let myError = error?.localizedDescription {
                         print(myError)
+                        let alert = UIAlertController(title: "ERROR", message: "No se encontro ningun usuario con esos datos", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action) in
+                            alert.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(alert,animated: true,completion: nil)
                     }else{
+                        let alert = UIAlertController(title: "ERROR", message: "No se encontro ningun usuario con esos datos", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action) in
+                            alert.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(alert,animated: true,completion: nil)
                         print("ERROR")
                     }
                 }
             })
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     

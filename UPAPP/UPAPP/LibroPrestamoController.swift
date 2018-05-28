@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import UserNotifications
+
 class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var handler:DatabaseHandle?
@@ -24,6 +26,9 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var portada_libro: UIImageView!
     @IBOutlet weak var edicion_libro: UILabel!
     
+    let date = Date()
+    let formatter = DateFormatter()
+    
     var libros_prestamo:[String] = []
     var nombre = String()
     
@@ -31,6 +36,14 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
     var user = String()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.formatter.dateFormat = "dd/MM/yyyy"
+        let result = formatter.string(from: self.date)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: {didAllow, error in
+            
+        })
+        
         ref = Database.database().reference()
         
         let str = self.usuario
@@ -56,10 +69,16 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     print(propietario)
                     let nombre = value?["nombre"] as? String ?? ""
                     let estatus = value?["status"] as? String ?? ""
+                    let fechaentrega = value?["Fecha_de_entrega"] as? String ?? ""
                     if propietario == self.user{
                         if estatus == "prestamo"{
                             self.libros_prestamo.append(nombre)
                         }
+                    }
+                    
+                    print(result)
+                    if  fechaentrega < result {
+                        print("Multa")
                     }
                     
                     
