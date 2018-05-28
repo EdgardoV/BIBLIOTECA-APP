@@ -49,6 +49,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daq-dI-Rm1">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="8ln-3D-2Sq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-Ag-wwZ">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
@@ -226,12 +229,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-V8-ubF">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="fK1-At-D0e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-Fm-bdd">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="HZ4-n4-Iej"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="4Ty-N0-f01"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-rQ-lMs">
@@ -244,6 +250,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-zq-LmX">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="NEt-eT-cWB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zZ-9E-pJK">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -437,10 +446,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syd-3o-3f9">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="kW2-zA-Md1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-sv-jly">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
+                                        <connections>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="Yr5-ct-QkC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noe-C9-2IN">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
@@ -449,6 +464,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B71-6h-vsM">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Y9M-zT-84f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G33-sR-0HC">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -570,12 +588,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-XH-Qor">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="ztc-Yd-pxG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-s2-2Mb">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="2TA-8h-vQI"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="o9I-eb-89D"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsJ-LN-wws">
@@ -589,7 +610,7 @@
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="XqV-vb-uvt"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="UkV-Oe-Jvx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLr-Q4-MiF">
@@ -774,6 +795,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJc-ef-uMP">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="pcE-ej-uuv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKy-bX-FON">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
@@ -790,14 +814,14 @@
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="ajf-Es-Orp"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="7VC-BP-POx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfo-xi-eAE">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
                                         <state key="normal" backgroundImage="buscar_ico"/>
                                         <connections>
-                                            <segue destination="msq-Ss-m0s" kind="show" id="qZb-MO-d6C"/>
+                                            <segue destination="msq-Ss-m0s" kind="show" id="UXB-96-2Al"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1180,6 +1204,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68g-sl-5s2">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
+                                        <connections>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="DPn-ZC-ale"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-8z-f48">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
@@ -1191,12 +1218,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-6I-lUX">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Ozb-WF-4vF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXj-Uh-dkF">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
                                         <state key="normal" backgroundImage="buscar_ico"/>
                                         <connections>
-                                            <segue destination="msq-Ss-m0s" kind="show" id="2e6-9a-KOx"/>
+                                            <segue destination="msq-Ss-m0s" kind="show" id="5KK-w9-FPG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1307,12 +1337,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzV-nS-Vwf">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="INP-tO-hcv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="art-FR-gbB">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="91J-sb-PSh"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="Tbf-BG-MIQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-cG-9wS">
@@ -1325,6 +1358,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwy-YM-J9n">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="DC9-pj-7ZJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-HJ-wv2">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -1568,9 +1604,10 @@
         <image name="user_ico" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="91J-sb-PSh"/>
-        <segue reference="hTG-TH-a9D"/>
-        <segue reference="mjr-QK-KV5"/>
-        <segue reference="OXp-7a-jUb"/>
+        <segue reference="pcE-ej-uuv"/>
+        <segue reference="DPn-ZC-ale"/>
+        <segue reference="5KK-w9-FPG"/>
+        <segue reference="cwU-ZK-5qC"/>
+        <segue reference="Ozb-WF-4vF"/>
     </inferredMetricsTieBreakers>
 </document>
