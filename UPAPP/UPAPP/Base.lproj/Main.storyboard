@@ -1362,13 +1362,7 @@
         <image name="multa_ico" width="42" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="91J-sb-PSh"/>
-        <segue reference="qZb-MO-d6C"/>
-        <segue reference="ajf-Es-Orp"/>
-=======
         <segue reference="hTG-TH-a9D"/>
         <segue reference="OXp-7a-jUb"/>
->>>>>>> ad992e8c72b4bd0775cf16d373c9b33dc71fd56c
     </inferredMetricsTieBreakers>
 </document>
