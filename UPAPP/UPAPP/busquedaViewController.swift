@@ -79,14 +79,17 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var resultBusqueda = segue.destination as! ResultBusViewController
-        resultBusqueda.Nombre = Nombre
-        resultBusqueda.Autor = Autor
-        resultBusqueda.Editorial = Editorial
-        resultBusqueda.Autor = Autor
-        resultBusqueda.Disponibe = Dispo
-        resultBusqueda.Edicion = Edicion
-        resultBusqueda.be = be
+
+        if let resultBusqueda = segue.destination as? ResultBusViewController {
+            resultBusqueda.Nombre = Nombre
+            resultBusqueda.Autor = Autor
+            resultBusqueda.Editorial = Editorial
+            resultBusqueda.Autor = Autor
+            resultBusqueda.Disponibe = Dispo
+            resultBusqueda.Edicion = Edicion
+            resultBusqueda.be = be
+        }
+        
     }
     
     override func viewDidLoad() {

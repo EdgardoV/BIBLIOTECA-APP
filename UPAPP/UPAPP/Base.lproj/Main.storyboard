@@ -97,15 +97,9 @@
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Buscar" id="804-JH-Io1">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="multa_desc" textLabel="zw4-OG-4XQ" style="IBUITableViewCellStyleDefault" id="139-EV-Jxu">
-                                        <rect key="frame" x="0.0" y="72" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="139-EV-Jxu" id="aHi-VF-bc4">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.666666666666664"/>
@@ -161,7 +155,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="tC7-FP-ITP"/>
                     <connections>
-                        <outlet property="buscar_multas" destination="804-JH-Io1" id="bYW-sQ-VWu"/>
                         <outlet property="consulta_multas" destination="osp-pj-SjC" id="gzm-sP-qKG"/>
                         <segue destination="Jwf-Xi-kfd" kind="showDetail" identifier="MostrarDetalle" id="98d-bg-gMX"/>
                     </connections>
@@ -484,7 +477,7 @@
         <!--Busqueda View Controller-->
         <scene sceneID="KMg-a8-A5r">
             <objects>
-                <viewController id="msq-Ss-m0s" customClass="busquedaViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="msq-Ss-m0s" customClass="busquedaViewController" customModule="UPAPP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2EJ-GL-TaJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,6 +523,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKz-U0-F5E">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="XqV-vb-uvt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLr-Q4-MiF">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -1272,7 +1268,7 @@
         <image name="multa_ico" width="42" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Zw-4F-u8z"/>
-        <segue reference="hTG-TH-a9D"/>
+        <segue reference="EMj-bA-846"/>
+        <segue reference="XqV-vb-uvt"/>
     </inferredMetricsTieBreakers>
 </document>
