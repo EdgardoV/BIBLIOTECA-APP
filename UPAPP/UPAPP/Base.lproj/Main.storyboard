@@ -156,15 +156,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tC7-FP-ITP"/>
                     <connections>
                         <outlet property="buscar_multas" destination="804-JH-Io1" id="bYW-sQ-VWu"/>
                         <outlet property="consulta_multas" destination="osp-pj-SjC" id="gzm-sP-qKG"/>
-                        <segue destination="Jwf-Xi-kfd" kind="show" id="sHz-J2-cKk"/>
+                        <segue destination="Jwf-Xi-kfd" kind="showDetail" identifier="MostrarDetalle" id="98d-bg-gMX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.60000000000002" y="-2840.3940886699506"/>
+            <point key="canvasLocation" x="302" y="-2840"/>
         </scene>
         <!--Multa Detalle View Controller-->
         <scene sceneID="71G-pF-JhT">
@@ -282,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favor de pagar lo antes posible en Servicios Escolares" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGh-JS-HQi">
-                                <rect key="frame" x="2" y="663" width="371" height="15.666666666666629"/>
+                                <rect key="frame" x="2" y="611" width="371" height="15.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -295,10 +296,20 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-3K-SBt">
+                                <rect key="frame" x="243" y="658" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.6534914839" blue="0.27389778399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OXp-7a-jUb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y9q-Yb-ftC" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" id="0Ob-Fl-r8A"/>
+                            <constraint firstItem="MGh-JS-HQi" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" constant="2" id="2Rf-wE-MRE"/>
                             <constraint firstItem="UmH-vw-cYo" firstAttribute="trailing" secondItem="MGh-JS-HQi" secondAttribute="trailing" constant="2" id="2T8-7u-dxh"/>
                             <constraint firstItem="y9q-Yb-ftC" firstAttribute="trailing" secondItem="UmH-vw-cYo" secondAttribute="trailing" id="2kV-UA-HWQ"/>
                             <constraint firstItem="y9q-Yb-ftC" firstAttribute="top" secondItem="sid-dU-bv7" secondAttribute="top" constant="739" id="5RB-IA-wCW"/>
@@ -315,14 +326,12 @@
                             <constraint firstItem="cWu-QK-ivo" firstAttribute="top" secondItem="sid-dU-bv7" secondAttribute="top" constant="270" id="HgM-nc-g32"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="trailing" secondItem="UmH-vw-cYo" secondAttribute="trailing" id="M5Z-Gd-x4M"/>
                             <constraint firstItem="aL0-Rw-GkZ" firstAttribute="top" secondItem="cWu-QK-ivo" secondAttribute="bottom" constant="8" symbolic="YES" id="MS4-Le-n7N"/>
-                            <constraint firstItem="y9q-Yb-ftC" firstAttribute="top" secondItem="MGh-JS-HQi" secondAttribute="bottom" constant="60.329999999999998" id="MYp-Fz-jqk"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="trailing" secondItem="UmH-vw-cYo" secondAttribute="trailing" id="Nvi-yP-26N"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="trailing" secondItem="y9q-Yb-ftC" secondAttribute="trailing" id="POw-lN-U2b"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" id="R2V-7Y-2vm"/>
                             <constraint firstItem="y9q-Yb-ftC" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" id="UnG-xq-2fQ"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="leading" secondItem="y9q-Yb-ftC" secondAttribute="leading" id="WUe-Fy-Gqn"/>
                             <constraint firstAttribute="bottom" secondItem="y9q-Yb-ftC" secondAttribute="bottom" id="XDr-Bb-K8p"/>
-                            <constraint firstItem="MGh-JS-HQi" firstAttribute="top" secondItem="eL2-nq-Gyv" secondAttribute="bottom" constant="60" id="aHF-Os-1bU"/>
                             <constraint firstItem="cWu-QK-ivo" firstAttribute="leading" secondItem="JsF-wO-Q8p" secondAttribute="leading" id="aSS-NW-JOE"/>
                             <constraint firstItem="cWu-QK-ivo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SSZ-HO-QhM" secondAttribute="leading" id="cUM-hO-LqT"/>
                             <constraint firstItem="cWu-QK-ivo" firstAttribute="trailing" secondItem="JsF-wO-Q8p" secondAttribute="trailing" id="dVD-cd-ot1"/>
@@ -337,13 +346,20 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aL0-Rw-GkZ" secondAttribute="trailing" constant="20" symbolic="YES" id="mQC-JN-NDt"/>
                             <constraint firstItem="eL2-nq-Gyv" firstAttribute="top" secondItem="SSZ-HO-QhM" secondAttribute="bottom" constant="66" id="mfU-ZE-ylN"/>
                             <constraint firstItem="qhs-KG-dua" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" constant="37" id="oaP-Vy-ofy"/>
+                            <constraint firstItem="UmH-vw-cYo" firstAttribute="trailing" secondItem="MGh-JS-HQi" secondAttribute="trailing" constant="2" id="ovw-rH-eOS"/>
                             <constraint firstItem="oAB-6o-i8D" firstAttribute="top" secondItem="sid-dU-bv7" secondAttribute="top" id="prd-n7-SNN"/>
                             <constraint firstItem="UmH-vw-cYo" firstAttribute="trailing" secondItem="qhs-KG-dua" secondAttribute="trailing" constant="64" id="rAw-Ht-hbj"/>
                             <constraint firstItem="y9q-Yb-ftC" firstAttribute="trailing" secondItem="UmH-vw-cYo" secondAttribute="trailing" id="tzL-Wc-eNn"/>
                             <constraint firstItem="eL2-nq-Gyv" firstAttribute="leading" secondItem="UmH-vw-cYo" secondAttribute="leading" constant="66" id="xVy-AM-njy"/>
+                            <constraint firstItem="MGh-JS-HQi" firstAttribute="top" secondItem="eL2-nq-Gyv" secondAttribute="bottom" constant="8" id="xtA-mk-5oo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UmH-vw-cYo"/>
                     </view>
+                    <connections>
+                        <outlet property="costo_lbl" destination="eL2-nq-Gyv" id="Upg-vO-kVi"/>
+                        <outlet property="fecha_lbl" destination="aL0-Rw-GkZ" id="Psm-8d-U2s"/>
+                        <outlet property="nombre_lbl" destination="SSZ-HO-QhM" id="ds2-qm-mGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUL-Ev-bMk" sceneMemberID="firstResponder"/>
             </objects>
@@ -454,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tH1-GG-DEG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="-2840"/>
+            <point key="canvasLocation" x="1097" y="-2840"/>
         </scene>
         <!--Busqueda View Controller-->
         <scene sceneID="KMg-a8-A5r">
