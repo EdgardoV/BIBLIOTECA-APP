@@ -14,33 +14,21 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
     @IBOutlet weak var txtNombre: UISearchBar!
     @IBOutlet weak var txtAutor: UISearchBar!
     @IBOutlet weak var txtEditorial: UISearchBar!
-    @IBOutlet weak var lblDisp: UILabel!
     @IBOutlet weak var texEdicion: UISearchBar!
-    @IBOutlet weak var opcDisp: UISwitch!
     @IBOutlet weak var opcBusquedaA: UISwitch!
     @IBOutlet weak var lblAlert1: UILabel!
     @IBOutlet weak var busesp1: UILabel!
     @IBOutlet weak var busesp2: UILabel!
-    var Dispo:String = "Si"
     var Nombre = String()
     var Autor = String()
     var Editorial = String ()
     var Edicion = String()
-    var be = Int()
+    var be:Int = 1
     
-    @IBAction func opcDispA(_ sender: UISwitch) {
-        if(opcDisp.isOn){
-            Dispo = "Si"
-        }else{
-            Dispo = "No"
-        }
-    }
     @IBAction func opcBusqueda(_ sender: UISwitch) {
         if(opcBusquedaA.isOn){
             txtAutor.isHidden = false
             txtEditorial.isHidden = false
-            lblDisp.isHidden = false
-            opcDisp.isHidden = false
             texEdicion.isHidden = false
             be = 1
             
@@ -48,8 +36,6 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
         }else{
             txtAutor.isHidden = true
             txtEditorial.isHidden = true
-            lblDisp.isHidden = true
-            opcDisp.isHidden = true
             texEdicion.isHidden = true
             be = 0
         }
@@ -85,7 +71,6 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
             resultBusqueda.Autor = Autor
             resultBusqueda.Editorial = Editorial
             resultBusqueda.Autor = Autor
-            resultBusqueda.Disponibe = Dispo
             resultBusqueda.Edicion = Edicion
             resultBusqueda.be = be
         }
