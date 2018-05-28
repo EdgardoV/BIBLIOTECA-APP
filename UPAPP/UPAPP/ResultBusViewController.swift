@@ -18,6 +18,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     var Disponibe = String()
     var consulta:[String] = []
     var librosMostrados:[String] = []
+    var myIndex = 0
     var handler:DatabaseHandle?
     var ref: DatabaseReference?
     @IBOutlet weak var lbnombre: UILabel!
@@ -34,7 +35,28 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = consulta[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
+        cell.contentView.backgroundColor = UIColor(red: (42/255.0), green: (88/255.0), blue: (128/255.0), alpha: 1.0)
         return(cell)
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lbnombre.isHidden = false
+        lbAutor.isHidden = false
+        lbEdicion.isHidden = false
+        lbEditorial.isHidden = false
+        lbDispo.isHidden = false
+        self.myIndex = indexPath.row
+        handler = ref?.child("libro").child(librosMostrados[myIndex]).observe(DataEventType.value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            if(value != nil){
+                self.lbnombre.text = value?["nombre"] as? String ?? ""
+                self.lbAutor.text = value?["autor"] as? String ?? ""
+                self.lbEditorial.text = value?["editorial"] as? String ?? ""
+                self.lbEdicion.text = String(value?["edicion"] as? Int ?? 0)
+                self.lbDispo.text = value?["status"] as? String ?? ""
+            }
+            
+        })
     }
 
     override func viewDidLoad() {
@@ -47,13 +69,13 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                 
             }
         }else if(be == 0){
-            for index in 1...16{
+            for index in 1...18{
                 handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     if(value != nil){
                         if(value?["nombre"] as? String ?? "" == self.Nombre){
                             self.consulta.append(value?["nombre"] as? String ?? "")
-                            //self.librosMostrados.append("libro\(index)")
+                            self.librosMostrados.append("libro\(index)")
                             self.Tabla.reloadData()
                         }
                     }
@@ -63,11 +85,11 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
             
         }
         
-        lbnombre.text = Nombre
-        lbAutor.text = Autor
-        lbEditorial.text = Editorial
-        lbEdicion.text = Edicion
-        lbDispo.text = Disponibe
+        lbnombre.isHidden = true
+        lbAutor.isHidden = true
+        lbEdicion.isHidden = true
+        lbEditorial.isHidden = true
+        lbDispo.isHidden = true
         // Do any additional setup after loading the view.
     }
 
