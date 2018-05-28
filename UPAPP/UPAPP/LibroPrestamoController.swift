@@ -37,7 +37,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
         autor_libro.isHidden = true
         editorial_libro.isHidden = true
         edicion_libro.isHidden = true
-        for index in 1...16{
+        for index in 1...18{
             handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: {(snapshot) in
                 let value = snapshot.value as? NSDictionary
                 if value != nil{
@@ -106,7 +106,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                             self.autor_libro.text = autor
                             self.editorial_libro.text = editorial
                             self.edicion_libro.text = edicion
-                            self.portada_libro.image = #imageLiteral(resourceName: "libro1.jpg")
+                            self.portada_libro.image = #imageLiteral(resourceName: "libro\(arc4random_uniform(5) + 1).jpg")
                         }
                     }
                     

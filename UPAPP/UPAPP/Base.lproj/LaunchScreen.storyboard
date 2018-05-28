@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Diseño sin título" translatesAutoresizingMaskIntoConstraints="NO" id="764-WL-n6t">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Diseño sin título" translatesAutoresizingMaskIntoConstraints="NO" id="764-WL-n6t">
                                 <rect key="frame" x="-69" y="-11" width="512" height="823"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Diseño sin título" width="533" height="833"/>
+        <image name="Diseño sin título" width="533" height="833"/>
     </resources>
 </document>
