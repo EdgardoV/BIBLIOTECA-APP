@@ -19,6 +19,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     var consulta:[String] = []
     var librosMostrados:[String] = []
     var myIndex = 0
+    var contador = Int()
     var handler:DatabaseHandle?
     var ref: DatabaseReference?
     @IBOutlet weak var lbnombre: UILabel!
@@ -27,6 +28,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var lbEdicion: UILabel!
     @IBOutlet weak var lbDispo: UILabel!
     @IBOutlet weak var Tabla: UITableView!
+    @IBOutlet weak var lbNotfound: UILabel!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(consulta.count)
@@ -37,6 +39,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = consulta[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         cell.contentView.backgroundColor = UIColor(red: (42/255.0), green: (88/255.0), blue: (128/255.0), alpha: 1.0)
+        Tabla.backgroundColor = UIColor(red: (42/255.0), green: (88/255.0), blue: (128/255.0), alpha: 1.0)
         return(cell)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -63,10 +66,21 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         ref = Database.database().reference()
         if(be == 1){
-            if(Nombre != "" && Autor != "" && Editorial != "" && Edicion != "" && Disponibe == "Si"){
-                
-            }else if(Nombre != "" && Autor != "" && Editorial != "" && Edicion != "" && Disponibe == "No"){
-                
+            for index in 1...18{
+                handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    if(value != nil){
+                        if(value?["nombre"] as? String ?? "" == self.Nombre && value?["autor"] as? String ?? "" == self.Autor && value?["editorial"] as? String ?? "" == self.Editorial && value?["edicion"] as? String ?? "" == self.Edicion){
+                            self.consulta.append(value?["nombre"] as? String ?? "")
+                            self.librosMostrados.append("libro\(index)")
+                            self.contador = self.contador + 1
+                            self.Tabla.reloadData()
+                            self.Tabla.isHidden = false
+                            self.lbNotfound.isHidden = true
+                        }
+                    }
+                    
+                })
             }
         }else if(be == 0){
             for index in 1...18{
@@ -76,11 +90,21 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                         if(value?["nombre"] as? String ?? "" == self.Nombre){
                             self.consulta.append(value?["nombre"] as? String ?? "")
                             self.librosMostrados.append("libro\(index)")
+                            self.contador = self.contador + 1
                             self.Tabla.reloadData()
+                            self.Tabla.isHidden = false
+                            self.lbNotfound.isHidden = true
                         }
                     }
                     
                 })
+            }
+            //self.lbEditorial.text = String(self.contador)
+            if(self.contador == 0){
+                Tabla.isHidden = true
+                lbNotfound.isHidden = false
+            }else{
+                
             }
             
         }
