@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAU-HX-RmL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EeU-qo-9CO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,6 +39,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daq-dI-Rm1">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="8ln-3D-2Sq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-Ag-wwZ">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
@@ -50,6 +53,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X61-xl-dlP">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="DfG-7l-tFX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG9-oD-aSa">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
@@ -203,21 +209,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-V8-ubF">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="fK1-At-D0e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-Fm-bdd">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="HZ4-n4-Iej"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="4Ty-N0-f01"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-rQ-lMs">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="rMe-FO-qZu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-zq-LmX">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="NEt-eT-cWB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zZ-9E-pJK">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -374,10 +389,10 @@
             </objects>
             <point key="canvasLocation" x="301.60000000000002" y="-2136.2068965517242"/>
         </scene>
-        <!--View Controller-->
+        <!--Hist View Controller-->
         <scene sceneID="6EN-j4-AZ3">
             <objects>
-                <viewController id="EeU-qo-9CO" customClass="ViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EeU-qo-9CO" customClass="histViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YjF-36-yhf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,10 +426,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syd-3o-3f9">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="kW2-zA-Md1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-sv-jly">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
+                                        <connections>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="Yr5-ct-QkC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noe-C9-2IN">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
@@ -423,6 +444,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B71-6h-vsM">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Y9M-zT-84f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G33-sR-0HC">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -453,6 +477,42 @@
                                     <constraint firstItem="G33-sR-0HC" firstAttribute="leading" secondItem="gbg-sv-jly" secondAttribute="trailing" constant="31" id="wyT-6k-zZV"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="15" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOH-xR-nec">
+                                <rect key="frame" x="0.0" y="225" width="375" height="418"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="wY9-x6-q4l">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wY9-x6-q4l" id="Sed-bL-sJB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EeU-qo-9CO" id="9qw-Un-seT"/>
+                                    <outlet property="delegate" destination="EeU-qo-9CO" id="2Mt-bs-5xH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-ji-C7Z">
+                                <rect key="frame" x="311" y="159" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="history_ico"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Historial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMj-Rd-kB7">
+                                <rect key="frame" x="28" y="166" width="175" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.99296719150000001" green="1" blue="0.98146447820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="4" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -479,10 +539,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tCJ-tA-EJ7"/>
                     </view>
+                    <connections>
+                        <outlet property="Tabla" destination="nOH-xR-nec" id="dNf-xN-kWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tH1-GG-DEG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-2840"/>
+            <point key="canvasLocation" x="1096.8" y="-2840.3940886699506"/>
         </scene>
         <!--Busqueda View Controller-->
         <scene sceneID="KMg-a8-A5r">
@@ -511,23 +574,29 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-XH-Qor">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="ztc-Yd-pxG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-s2-2Mb">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="2TA-8h-vQI"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="o9I-eb-89D"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsJ-LN-wws">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="g8P-Ad-tFU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKz-U0-F5E">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="XqV-vb-uvt"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="UkV-Oe-Jvx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLr-Q4-MiF">
@@ -702,6 +771,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJc-ef-uMP">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="pcE-ej-uuv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKy-bX-FON">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
@@ -710,19 +782,22 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aul-N9-tYr">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="cLN-MK-dRo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkp-tE-ehQ">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="ajf-Es-Orp"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="7VC-BP-POx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfo-xi-eAE">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
                                         <state key="normal" backgroundImage="buscar_ico"/>
                                         <connections>
-                                            <segue destination="msq-Ss-m0s" kind="show" id="qZb-MO-d6C"/>
+                                            <segue destination="msq-Ss-m0s" kind="show" id="UXB-96-2Al"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1140,20 +1215,29 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68g-sl-5s2">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
+                                        <connections>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="DPn-ZC-ale"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-8z-f48">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="cwU-ZK-5qC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-6I-lUX">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Ozb-WF-4vF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXj-Uh-dkF">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
                                         <state key="normal" backgroundImage="buscar_ico"/>
                                         <connections>
-                                            <segue destination="msq-Ss-m0s" kind="show" id="2e6-9a-KOx"/>
+                                            <segue destination="msq-Ss-m0s" kind="show" id="5KK-w9-FPG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1351,21 +1435,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzV-nS-Vwf">
                                         <rect key="frame" x="19" y="9" width="29" height="29"/>
                                         <state key="normal" backgroundImage="informacion_ico"/>
+                                        <connections>
+                                            <segue destination="7eM-ro-3IV" kind="show" id="INP-tO-hcv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="art-FR-gbB">
                                         <rect key="frame" x="88" y="7" width="31" height="31"/>
                                         <state key="normal" backgroundImage="calendar_ico"/>
                                         <connections>
-                                            <segue destination="cwY-Jt-AOh" kind="show" id="91J-sb-PSh"/>
+                                            <segue destination="cwY-Jt-AOh" kind="show" id="Tbf-BG-MIQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zm-cG-9wS">
                                         <rect key="frame" x="320" y="5" width="36" height="38"/>
                                         <state key="normal" backgroundImage="history_ico"/>
+                                        <connections>
+                                            <segue destination="EeU-qo-9CO" kind="show" id="mjr-QK-KV5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwy-YM-J9n">
                                         <rect key="frame" x="256" y="5" width="42" height="36"/>
                                         <state key="normal" backgroundImage="multa_ico"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="DC9-pj-7ZJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-HJ-wv2">
                                         <rect key="frame" x="150" y="-27" width="75" height="75"/>
@@ -1505,15 +1598,6 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No se encontraron Libros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-9g-Kui">
-                                <rect key="frame" x="34" y="136" width="316" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.99296719150000001" green="1" blue="0.98146447820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="3" height="-1"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-ye-Wx0">
                                 <rect key="frame" x="34" y="566" width="292" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1549,6 +1633,15 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No se encontraron Libros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wY-9g-Kui">
+                                <rect key="frame" x="34" y="137" width="316" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.99296719150000001" green="1" blue="0.98146447820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1610,8 +1703,10 @@
         <image name="user_ico" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="91J-sb-PSh"/>
-        <segue reference="2e6-9a-KOx"/>
-        <segue reference="ajf-Es-Orp"/>
+        <segue reference="kW2-zA-Md1"/>
+        <segue reference="Yr5-ct-QkC"/>
+        <segue reference="gXb-kn-CzG"/>
+        <segue reference="mjr-QK-KV5"/>
+        <segue reference="Y9M-zT-84f"/>
     </inferredMetricsTieBreakers>
 </document>

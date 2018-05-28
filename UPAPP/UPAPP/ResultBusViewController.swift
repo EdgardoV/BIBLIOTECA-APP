@@ -82,6 +82,10 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                             self.Tabla.reloadData()
                             self.Tabla.isHidden = false
                             self.lbNotfound.isHidden = true
+                            if (self.contador == 1){
+                               self.ref?.child("historial").child("150009").childByAutoId().setValue(value?["nombre"] as? String ?? "")
+                            }
+                            
                         }
                     }
                     
@@ -99,6 +103,9 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                             self.Tabla.reloadData()
                             self.Tabla.isHidden = false
                             self.lbNotfound.isHidden = true
+                            if (self.contador == 1){
+                               self.ref?.child("historial").child("150009").childByAutoId().setValue(value?["nombre"] as? String ?? "")
+                            }
                         }
                     }
                     self.Tabla?.reloadData()
