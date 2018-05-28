@@ -17,6 +17,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     var Edicion = String()
     var Disponibe = String()
     var consulta:[String] = []
+    var librosMostrados:[String] = []
     var handler:DatabaseHandle?
     var ref: DatabaseReference?
     @IBOutlet weak var lbnombre: UILabel!
@@ -46,14 +47,20 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                 
             }
         }else if(be == 0){
-            handler = ref?.child("libro").child(Nombre).observe(DataEventType.value, with: { (snapshot) in
-                let value = snapshot.value as? NSDictionary
+            for index in 1...16{
+                handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
                     if(value != nil){
-                        self.consulta.append(value?["nombre"] as? String ?? "")
-                        self.Tabla.reloadData()
+                        if(value?["nombre"] as? String ?? "" == self.Nombre){
+                            self.consulta.append(value?["nombre"] as? String ?? "")
+                            //self.librosMostrados.append("libro\(index)")
+                            self.Tabla.reloadData()
+                        }
                     }
-                
-            })
+                    
+                })
+            }
+            
         }
         
         lbnombre.text = Nombre
