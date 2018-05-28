@@ -15,7 +15,6 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     var Autor = String()
     var Editorial = String()
     var Edicion = String()
-    var Disponibe = String()
     var consulta:[String] = []
     var librosMostrados:[String] = []
     var myIndex = 0
@@ -70,7 +69,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                 handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     if(value != nil){
-                        if(value?["nombre"] as? String ?? "" == self.Nombre && value?["autor"] as? String ?? "" == self.Autor && value?["editorial"] as? String ?? "" == self.Editorial && value?["edicion"] as? String ?? "" == self.Edicion){
+                        if(value?["nombre"] as? String ?? "" == self.Nombre && value?["autor"] as? String ?? "" == self.Autor && value?["editorial"] as? String ?? "" == self.Editorial && value?["edicion"] as? Int ?? 0 == Int(self.Edicion)){
                             self.consulta.append(value?["nombre"] as? String ?? "")
                             self.librosMostrados.append("libro\(index)")
                             self.contador = self.contador + 1
