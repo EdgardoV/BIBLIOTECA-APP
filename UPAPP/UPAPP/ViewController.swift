@@ -51,7 +51,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let multa_celda = UITableViewCell(style: .default, reuseIdentifier: "multa_desc")
         multa_celda.textLabel?.text = multas_lbl[indexPath.row]
-        multa_celda.contentView.backgroundColor = UIColor.white
+        multa_celda.textLabel?.textColor = UIColor.white
+        multa_celda.contentView.backgroundColor = UIColor(red: (42/255.0), green: (88/255.0), blue: (128/255.0), alpha: 1.0)
         return multa_celda
     }
     

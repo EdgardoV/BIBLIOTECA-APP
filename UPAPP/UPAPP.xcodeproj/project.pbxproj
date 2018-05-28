@@ -23,6 +23,7 @@
 		ED56980F20B7DB3C004E5297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56980C20B7DB3B004E5297 /* Assets.xcassets */; };
 		ED84568E20B9DE7100ADB1F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */; };
 		ED84569420BB54DB00ADB1F4 /* MultaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84569320BB54DB00ADB1F4 /* MultaDetalleViewController.swift */; };
+		ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		ED56980C20B7DB3B004E5297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED84568D20B9DE7000ADB1F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED84569320BB54DB00ADB1F4 /* MultaDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultaDetalleViewController.swift; sourceTree = "<group>"; };
+		ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroPrestamoController.swift; sourceTree = "<group>"; };
 		F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */,
 				ED499A4E20A3B70D00CF98FF /* ViewController.swift */,
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
+				ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */,
 				14C8956020BA443F00AC0723 /* busquedaViewController.swift */,
 				ED56980C20B7DB3B004E5297 /* Assets.xcassets */,
 				ED499A5520A3B70F00CF98FF /* LaunchScreen.storyboard */,
@@ -399,6 +402,7 @@
 				14C8956320BA6FB300AC0723 /* ResultBusViewController.swift in Sources */,
 				ED84569420BB54DB00ADB1F4 /* MultaDetalleViewController.swift in Sources */,
 				ED499A4F20A3B70D00CF98FF /* ViewController.swift in Sources */,
+				ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */,
 				14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */,
 				ED499A4D20A3B70D00CF98FF /* AppDelegate.swift in Sources */,
 			);
