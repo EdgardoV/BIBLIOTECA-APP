@@ -46,13 +46,13 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                 
             }
         }else if(be == 0){
-            handler = ref?.child("libro").child(Nombre).observe(.childAdded, with: { (snapshot) in
-                if let item = snapshot.value as? String{
-                    if(item != "not null"){
-                        self.consulta.append(item)
+            handler = ref?.child("libro").child(Nombre).observe(DataEventType.value, with: { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                    if(value != nil){
+                        self.consulta.append(value?["nombre"] as? String ?? "")
                         self.Tabla.reloadData()
                     }
-                }
+                
             })
         }
         
