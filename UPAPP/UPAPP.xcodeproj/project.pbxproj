@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8956020BA443F00AC0723 /* busquedaViewController.swift */; };
 		14C8956320BA6FB300AC0723 /* ResultBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8956220BA6FB200AC0723 /* ResultBusViewController.swift */; };
-		14C8956720BC026B00AC0723 /* histViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C8956620BC026B00AC0723 /* histViewController.swift */; };
 		330C732BA5C9E0A40D6960AB /* Pods_UPAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */; };
 		B0248AF929D17EFC00B2606A /* Pods_UPAPPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */; };
 		C68FF2DD089D937D1C905236 /* Pods_UPAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7B1E61E6E71223E7978F7 /* Pods_UPAPP.framework */; };
@@ -27,6 +26,7 @@
 		ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */; };
 		ED95DAD220BBF90400E6AABD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DAD120BBF90400E6AABD /* LoginController.swift */; };
 		ED95DAD620BC068E00E6AABD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DAD520BC068E00E6AABD /* InfoViewController.swift */; };
+		ED95DAD820BC2CEA00E6AABD /* histViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DAD720BC2CE700E6AABD /* histViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		06460259CA38EC5063845EAE /* Pods-UPAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPP/Pods-UPAPP.release.xcconfig"; sourceTree = "<group>"; };
 		14C8956020BA443F00AC0723 /* busquedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = busquedaViewController.swift; sourceTree = "<group>"; };
 		14C8956220BA6FB200AC0723 /* ResultBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBusViewController.swift; sourceTree = "<group>"; };
-		14C8956620BC026B00AC0723 /* histViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = histViewController.swift; sourceTree = "<group>"; };
 		1570D41B6DB4EE2E63DF55B0 /* Pods_UPAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3464B6D2348C86574E7487 /* Pods_UPAPPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPAPPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51334CAC0E816F5954219B56 /* Pods-UPAPPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroPrestamoController.swift; sourceTree = "<group>"; };
 		ED95DAD120BBF90400E6AABD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ED95DAD520BC068E00E6AABD /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		ED95DAD720BC2CE700E6AABD /* histViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = histViewController.swift; path = "../../../../../../../Volumes/TOSHIBA EXT/histViewController.swift"; sourceTree = "<group>"; };
 		F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,12 +160,9 @@
 				ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */,
 				ED499A4E20A3B70D00CF98FF /* ViewController.swift */,
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
-<<<<<<< HEAD
 				ED95DAD520BC068E00E6AABD /* InfoViewController.swift */,
-=======
-				14C8956620BC026B00AC0723 /* histViewController.swift */,
->>>>>>> eca0bbe4a93db176d800c115cac540256a8ad884
 				ED95DAD120BBF90400E6AABD /* LoginController.swift */,
+				ED95DAD720BC2CE700E6AABD /* histViewController.swift */,
 				ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */,
 				14C8956020BA443F00AC0723 /* busquedaViewController.swift */,
 				ED56980C20B7DB3B004E5297 /* Assets.xcassets */,
@@ -413,9 +410,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED95DAD820BC2CEA00E6AABD /* histViewController.swift in Sources */,
 				14C8956320BA6FB300AC0723 /* ResultBusViewController.swift in Sources */,
 				ED84569420BB54DB00ADB1F4 /* MultaDetalleViewController.swift in Sources */,
-				14C8956720BC026B00AC0723 /* histViewController.swift in Sources */,
 				ED499A4F20A3B70D00CF98FF /* ViewController.swift in Sources */,
 				ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */,
 				14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */,

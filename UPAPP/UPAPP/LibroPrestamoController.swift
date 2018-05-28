@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var handler:DatabaseHandle?
@@ -26,10 +27,20 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
     var libros_prestamo:[String] = []
     var nombre = String()
     
-    
+    let usuario = (Auth.auth().currentUser?.email)!
+    var user = String()
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
+        let str = self.usuario
+        let index_0 = str.index(str.startIndex, offsetBy: 0)
+        let index_1 = str.index(str.startIndex, offsetBy: 1)
+        let index_2 = str.index(str.startIndex, offsetBy: 2)
+        let index_3 = str.index(str.startIndex, offsetBy: 3)
+        let index_4 = str.index(str.startIndex, offsetBy: 4)
+        let index_5 = str.index(str.startIndex, offsetBy: 5)
+        self.user = "\(str[index_0])\(str[index_1])\(str[index_2])\(str[index_3])\(str[index_4])\(str[index_5])"
         
         diaprestamo_libro.isHidden = true
         entrega_libro.isHidden = true
@@ -45,7 +56,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     print(propietario)
                     let nombre = value?["nombre"] as? String ?? ""
                     let estatus = value?["status"] as? String ?? ""
-                    if propietario == "150794"{
+                    if propietario == self.user{
                         if estatus == "prestamo"{
                             self.libros_prestamo.append(nombre)
                         }
@@ -64,7 +75,8 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let libro_celda = UITableViewCell(style: .default, reuseIdentifier: "libro_prestamo")
+        
+                                                                                                                                                                          let libro_celda = UITableViewCell(style: .default, reuseIdentifier: "libro_prestamo")
         libro_celda.textLabel?.text = libros_prestamo[indexPath.row]
         libro_celda.textLabel?.textColor = UIColor.white
         libro_celda.contentView.backgroundColor = UIColor(red: (42/255.0), green: (88/255.0), blue: (128/255.0), alpha: 1.0)
@@ -91,7 +103,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     let edicion = String(value?["edicion"] as? Int ?? 0)
                     let editorial = value?["editorial"] as? String ?? ""
                     let estatus = value?["status"] as? String ?? ""
-                    if nombre == nombrelibro && propietario == "150794"{
+                    if nombre == nombrelibro && propietario == self.user{
                         if estatus == "prestamo"{
                             self.diaprestamo_libro.isHidden = false
                             self.entrega_libro.isHidden = false

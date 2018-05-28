@@ -86,6 +86,11 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
         self.txtEditorial.delegate = self
         self.texEdicion.delegate = self
         self.txtNombre.delegate = self
+        
+        self.txtAutor.tintColor = UIColor.white
+        self.txtEditorial.tintColor = UIColor.white
+        self.texEdicion.tintColor = UIColor.white
+        self.txtNombre.tintColor = UIColor.white
         // Do any additional setup after loading the view.
     }
 

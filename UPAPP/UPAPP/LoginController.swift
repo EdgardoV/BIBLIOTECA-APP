@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginController: UIViewController {
+class LoginController: UIViewController , UITextFieldDelegate{
 
     @IBOutlet weak var usuario_txt: UITextField!
     @IBOutlet weak var pass_txt: UITextField!
@@ -36,24 +36,21 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.usuario_txt.delegate = self
+        self.pass_txt.delegate = self
         self.usuario_txt.keyboardType = UIKeyboardType.numberPad
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        usuario_txt.resignFirstResponder()
+        pass_txt.resignFirstResponder()
+        return (true)
     }
-    */
+
 
 }

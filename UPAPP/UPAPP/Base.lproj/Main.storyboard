@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EeU-qo-9CO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAU-HX-RmL">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -393,31 +393,21 @@
         <scene sceneID="6EN-j4-AZ3">
             <objects>
                 <viewController id="EeU-qo-9CO" customClass="histViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YjF-36-yhf">
+                    <view key="view" contentMode="scaleToFill" id="YjF-36-yhf" customClass="hist">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cb7-5L-nsx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xNX-me-hpH">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xNX-me-hpH">
                                         <rect key="frame" x="120" y="38" width="135" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario o matricula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2w-8p-3tg">
-                                        <rect key="frame" x="65" y="99" width="245" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.6534914839" blue="0.27389778399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="A2w-8p-3tg" secondAttribute="trailing" id="4bg-xT-Hsg"/>
                                     <constraint firstAttribute="width" secondItem="Cb7-5L-nsx" secondAttribute="height" multiplier="125:43" id="Ack-9d-Zn1"/>
-                                    <constraint firstItem="A2w-8p-3tg" firstAttribute="top" secondItem="xNX-me-hpH" secondAttribute="bottom" constant="8" id="CTa-b9-jL3"/>
-                                    <constraint firstItem="xNX-me-hpH" firstAttribute="centerX" secondItem="A2w-8p-3tg" secondAttribute="centerX" id="Ixt-xs-f4J"/>
-                                    <constraint firstAttribute="bottom" secondItem="A2w-8p-3tg" secondAttribute="bottom" constant="9" id="MZi-g2-xQt"/>
-                                    <constraint firstItem="A2w-8p-3tg" firstAttribute="leading" secondItem="Cb7-5L-nsx" secondAttribute="leading" constant="65" id="YgO-fJ-A0j"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amt-DV-GTN">

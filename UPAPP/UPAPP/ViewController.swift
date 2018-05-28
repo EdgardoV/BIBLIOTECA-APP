@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-
+import FirebaseAuth
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -19,11 +19,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var ref: DatabaseReference?
     var multas_lbl:[String] = []
     var indice = 0
+    let usuario = (Auth.auth().currentUser?.email)!
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
+        let str = self.usuario
+        let index_0 = str.index(str.startIndex, offsetBy: 0)
+        let index_1 = str.index(str.startIndex, offsetBy: 1)
+        let index_2 = str.index(str.startIndex, offsetBy: 2)
+        let index_3 = str.index(str.startIndex, offsetBy: 3)
+        let index_4 = str.index(str.startIndex, offsetBy: 4)
+        let index_5 = str.index(str.startIndex, offsetBy: 5)
+        let user = "\(str[index_0])\(str[index_1])\(str[index_2])\(str[index_3])\(str[index_4])\(str[index_5])"
+        
         for index in 0...50{
-            handler = ref?.child("multa").child("150009/\(index)").observe(DataEventType.value, with: {(snapshot) in
+            handler = ref?.child("multa").child("\(user)/\(index)").observe(DataEventType.value, with: {(snapshot) in
                 let value = snapshot.value as? NSDictionary
                 if value != nil{
                     let descripcion = value?["descripcion"] as? String ?? ""

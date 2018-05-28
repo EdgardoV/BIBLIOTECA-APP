@@ -52,15 +52,14 @@ class InfoViewController: UIViewController {
                 let correo = self.usuario
                 let carrera = value?["carrera"] as? String ?? ""
                 let semestre = String(value?["semestre"] as? Int ?? 0)
-                let libros = String(value?["n_libros"] as? Int ?? 0)
-                let multas = String(value?["n_multas"] as? Int ?? 0)
+                
                 self.nombre_lbl.text = nombre
                 self.matricula_lbl.text = String(matricula)
                 self.correo_lbl.text = correo
                 self.carrera_lbl.text = carrera
-                self.semestre_lbl.text = semestre
-                self.libros_lbl.text = libros
-                self.multas_lbl.text = multas
+                self.semestre_lbl.text = "Semestre \(semestre)"
+                self.getlibros(usuario: user)
+                self.getmultas(usuario: user)
                 
             }
         })
@@ -72,6 +71,57 @@ class InfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getmultas(usuario:String){
+        print("Usuario: \(usuario)")
+        var i = 0
+        for index in 1...49{
+            
+            handler = ref?.child("multa").child("\(usuario)/\(index)").observe(DataEventType.value, with: {(snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if value != nil{
+                    print(value)
+                    let estatus = value?["estatus"] as? String ?? ""
+                    print(estatus)
+                    if estatus == "pendiente" {
+                        print("Aumenta multas")
+                       i += 1
+                        print("Indice multas \(i)")
+                        self.multas_lbl.text = String(i)
+                    }
+                }
+                
+            })
+        }
+        
+    }
+    
+    func getlibros(usuario:String) {
+        print("Usuario: \(usuario)")
+        var indice = 0
+        for index in 1...18{
+            handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: {(snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if value != nil{
+                    let propietario = String(value?["propietario"] as? Int ?? 0)
+                    print("Propietario: \(propietario)")
+                    let estatus = value?["status"] as? String ?? ""
+                    if propietario == usuario{
+                        if estatus == "prestamo"{
+                            print("Aumenta libros")
+                            indice += 1
+                            print("Indice libros \(indice)")
+                            self.libros_lbl.text = String(indice)
+                        }
+                    }
+                    
+                    
+                }
+            })
+        }
+        
+        
     }
     
 
