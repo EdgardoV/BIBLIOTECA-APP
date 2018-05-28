@@ -28,6 +28,8 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var lbDispo: UILabel!
     @IBOutlet weak var Tabla: UITableView!
     @IBOutlet weak var lbNotfound: UILabel!
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var lblISBN: UILabel!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(consulta.count)
@@ -47,6 +49,8 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
         lbEdicion.isHidden = false
         lbEditorial.isHidden = false
         lbDispo.isHidden = false
+        lblDesc.isHidden = false
+        lblISBN.isHidden = false
         self.myIndex = indexPath.row
         handler = ref?.child("libro").child(librosMostrados[myIndex]).observe(DataEventType.value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -56,6 +60,8 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.lbEditorial.text = value?["editorial"] as? String ?? ""
                 self.lbEdicion.text = String(value?["edicion"] as? Int ?? 0)
                 self.lbDispo.text = value?["status"] as? String ?? ""
+                self.lblISBN.text = value?["ISBN"] as? String ?? ""
+                self.lblDesc.text = value?["descripcion"] as? String ?? ""
             }
             
         })
@@ -95,7 +101,7 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
                             self.lbNotfound.isHidden = true
                         }
                     }
-                    
+                    self.Tabla?.reloadData()
                 })
             }
             //self.lbEditorial.text = String(self.contador)
@@ -113,6 +119,8 @@ class ResultBusViewController: UIViewController, UITableViewDelegate, UITableVie
         lbEdicion.isHidden = true
         lbEditorial.isHidden = true
         lbDispo.isHidden = true
+        lblDesc.isHidden = true
+        lblISBN.isHidden = true
         // Do any additional setup after loading the view.
     }
 
