@@ -14,15 +14,30 @@ class LoginController: UIViewController {
     @IBOutlet weak var usuario_txt: UITextField!
     @IBOutlet weak var pass_txt: UITextField!
     @IBOutlet weak var ingresa_btn: UIButton!
-    
-    @IBAction func accion_ingresar(_ sender: Any) {
+    @IBAction func accion_btn(_ sender: UIButton) {
         
+        if self.usuario_txt.text != "" && self.pass_txt.text != ""{
+            let email = "\(self.usuario_txt.text!)@upslp.edu.mx"
+            print(email)
+            Auth.auth().signIn(withEmail: email, password: self.pass_txt.text!, completion: {(user,error)in
+                if user != nil {
+                    self.performSegue(withIdentifier: "login", sender: self)
+                }else{
+                    if let myError = error?.localizedDescription {
+                        print(myError)
+                    }else{
+                        print("ERROR")
+                    }
+                }
+            })
+        }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.usuario_txt.keyboardType = UIKeyboardType.numberPad
     }
 
     override func didReceiveMemoryWarning() {

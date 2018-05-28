@@ -25,6 +25,7 @@
 		ED84569420BB54DB00ADB1F4 /* MultaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84569320BB54DB00ADB1F4 /* MultaDetalleViewController.swift */; };
 		ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */; };
 		ED95DAD220BBF90400E6AABD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DAD120BBF90400E6AABD /* LoginController.swift */; };
+		ED95DAD620BC068E00E6AABD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95DAD520BC068E00E6AABD /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		ED84569320BB54DB00ADB1F4 /* MultaDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultaDetalleViewController.swift; sourceTree = "<group>"; };
 		ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroPrestamoController.swift; sourceTree = "<group>"; };
 		ED95DAD120BBF90400E6AABD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ED95DAD520BC068E00E6AABD /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		F622A87CCDAFAA57BB6DF6EF /* Pods-UPAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPAPPTests/Pods-UPAPPTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				ED499A4C20A3B70D00CF98FF /* AppDelegate.swift */,
 				ED499A4E20A3B70D00CF98FF /* ViewController.swift */,
 				ED499A5020A3B70D00CF98FF /* Main.storyboard */,
+				ED95DAD520BC068E00E6AABD /* InfoViewController.swift */,
 				ED95DAD120BBF90400E6AABD /* LoginController.swift */,
 				ED95DACD20BB995500E6AABD /* LibroPrestamoController.swift */,
 				14C8956020BA443F00AC0723 /* busquedaViewController.swift */,
@@ -410,6 +413,7 @@
 				ED95DACE20BB995500E6AABD /* LibroPrestamoController.swift in Sources */,
 				14C8956120BA443F00AC0723 /* busquedaViewController.swift in Sources */,
 				ED499A4D20A3B70D00CF98FF /* AppDelegate.swift in Sources */,
+				ED95DAD620BC068E00E6AABD /* InfoViewController.swift in Sources */,
 				ED95DAD220BBF90400E6AABD /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
