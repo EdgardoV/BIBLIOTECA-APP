@@ -162,16 +162,17 @@
                     <connections>
                         <outlet property="buscar_multas" destination="804-JH-Io1" id="bYW-sQ-VWu"/>
                         <outlet property="consulta_multas" destination="osp-pj-SjC" id="gzm-sP-qKG"/>
+                        <segue destination="Jwf-Xi-kfd" kind="show" id="sHz-J2-cKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301.60000000000002" y="-2840.3940886699506"/>
         </scene>
-        <!--View Controller-->
+        <!--Multa Detalle View Controller-->
         <scene sceneID="71G-pF-JhT">
             <objects>
-                <viewController id="Jwf-Xi-kfd" customClass="ViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jwf-Xi-kfd" customClass="MultaDetalleViewController" customModule="UPAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sid-dU-bv7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -559,8 +560,8 @@
                                     <action selector="opcDispA:" destination="msq-Ss-m0s" eventType="valueChanged" id="01U-Ou-eDJ"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Busqueda Avanzada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmc-JS-b3Y">
-                                <rect key="frame" x="38" y="237" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Busqueda Especifica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmc-JS-b3Y">
+                                <rect key="frame" x="38" y="237" width="160" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -604,6 +605,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Necesita todos los datos del libro en" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yy-wm-sOI">
+                                <rect key="frame" x="28" y="495" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="busqueda específica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikp-zY-CLF">
+                                <rect key="frame" x="28" y="513" width="319" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16573932359999999" green="0.34579428719999999" blue="0.50146732230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -631,6 +646,8 @@
                         <viewLayoutGuide key="safeArea" id="LHw-a6-FBe"/>
                     </view>
                     <connections>
+                        <outlet property="busesp1" destination="4yy-wm-sOI" id="HBZ-7V-PJY"/>
+                        <outlet property="busesp2" destination="Ikp-zY-CLF" id="daD-I2-cGW"/>
                         <outlet property="lblAlert1" destination="9nD-0H-Ug8" id="ND3-fL-Vpt"/>
                         <outlet property="lblDisp" destination="b6A-aC-8w4" id="Slx-NN-pFF"/>
                         <outlet property="opcBusquedaA" destination="Gfc-pF-Tap" id="7iD-pF-wYC"/>
@@ -1131,6 +1148,20 @@
                                 <rect key="frame" x="24" y="165" width="326" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="eux-TU-YOn">
+                                        <rect key="frame" x="0.0" y="28" width="326" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eux-TU-YOn" id="PRs-TH-aAN">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xJw-4I-qG8" id="odc-Dm-p7u"/>
+                                    <outlet property="delegate" destination="xJw-4I-qG8" id="Vh6-RS-rIp"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-Wo-iug">
                                 <rect key="frame" x="243" y="658" width="107" height="50"/>
@@ -1203,6 +1234,7 @@
                         <viewLayoutGuide key="safeArea" id="Dh4-QW-JaD"/>
                     </view>
                     <connections>
+                        <outlet property="Tabla" destination="yzO-zk-SeB" id="rRz-aA-SWc"/>
                         <outlet property="lbAutor" destination="UWX-Ix-taO" id="XcK-LO-lzZ"/>
                         <outlet property="lbDispo" destination="be0-3m-TFs" id="yEM-W3-P3q"/>
                         <outlet property="lbEdicion" destination="fxx-Ge-gvl" id="we4-Lt-eho"/>
@@ -1224,6 +1256,7 @@
         <image name="multa_ico" width="42" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4Zw-4F-u8z"/>
         <segue reference="hTG-TH-a9D"/>
     </inferredMetricsTieBreakers>
 </document>

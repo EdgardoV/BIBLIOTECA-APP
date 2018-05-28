@@ -7,23 +7,55 @@
 //
 
 import UIKit
-import Firebase
-class ResultBusViewController: UIViewController {
+import FirebaseDatabase
+class ResultBusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var be = Int()
     var Nombre = String()
     var Autor = String()
     var Editorial = String()
     var Edicion = String()
     var Disponibe = String()
+    var consulta:[String] = []
+    var handler:DatabaseHandle?
+    var ref: DatabaseReference?
     @IBOutlet weak var lbnombre: UILabel!
     @IBOutlet weak var lbAutor: UILabel!
     @IBOutlet weak var lbEditorial: UILabel!
     @IBOutlet weak var lbEdicion: UILabel!
     @IBOutlet weak var lbDispo: UILabel!
+    @IBOutlet weak var Tabla: UITableView!
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return(consulta.count)
+    }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell.textLabel?.text = consulta[indexPath.row]
+        return(cell)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        if(be == 1){
+            if(Nombre != "" && Autor != "" && Editorial != "" && Edicion != "" && Disponibe == "Si"){
+                
+            }else if(Nombre != "" && Autor != "" && Editorial != "" && Edicion != "" && Disponibe == "No"){
+                
+            }
+        }else if(be == 0){
+            handler = ref?.child("libro").child(Nombre).observe(.childAdded, with: { (snapshot) in
+                if let item = snapshot.value as? String{
+                    if(item != "not null"){
+                        self.consulta.append(item)
+                        self.Tabla.reloadData()
+                    }
+                }
+            })
+        }
+        
         lbnombre.text = Nombre
         lbAutor.text = Autor
         lbEditorial.text = Editorial
