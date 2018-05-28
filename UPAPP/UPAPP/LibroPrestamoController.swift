@@ -84,6 +84,9 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     let propietario = String(value?["propietario"] as? Int ?? 0)
                     print(propietario)
                     let nombre = value?["nombre"] as? String ?? ""
+                    let fechaprestamo
+                    let fechaentrega
+                    
                     let estatus = value?["status"] as? String ?? ""
                     let isbn = value?["ISBN"] as? String ?? ""
                     if nombre == nombrelibro && propietario == "150794"{
