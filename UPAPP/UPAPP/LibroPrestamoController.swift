@@ -77,7 +77,7 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
         let libro_celda = prestamo_libro.cellForRow(at: indexPath)
         let valor = libro_celda?.textLabel?.text
         let nombrelibro = valor!
-        
+        print(nombrelibro)
         for index in 1...18{
             handler = ref?.child("libro").child("libro\(index)").observe(DataEventType.value, with: {(snapshot) in
                 let value = snapshot.value as? NSDictionary
@@ -93,6 +93,13 @@ class LibroPrestamoController: UIViewController, UITableViewDelegate, UITableVie
                     let estatus = value?["status"] as? String ?? ""
                     if nombre == nombrelibro && propietario == "150794"{
                         if estatus == "prestamo"{
+                            self.diaprestamo_libro.isHidden = false
+                            self.entrega_libro.isHidden = false
+                            self.nombre_libro.isHidden = false
+                            self.autor_libro.isHidden = false
+                            self.editorial_libro.isHidden = false
+                            self.edicion_libro.isHidden = false
+                            
                             self.diaprestamo_libro.text = fechaprestamo
                             self.entrega_libro.text = fechaentrega
                             self.nombre_libro.text = nombre
