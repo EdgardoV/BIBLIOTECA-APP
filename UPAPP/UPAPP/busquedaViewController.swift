@@ -12,15 +12,29 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
     
     
     @IBOutlet weak var txtNombre: UISearchBar!
-    @IBOutlet weak var txtAutor: UITextField!
-    @IBOutlet weak var txtEditorial: UITextField!
-    @IBOutlet weak var texEdicion: UITextField!
+    @IBOutlet weak var txtAutor: UISearchBar!
+    @IBOutlet weak var txtEditorial: UISearchBar!
     @IBOutlet weak var lblDisp: UILabel!
+    @IBOutlet weak var texEdicion: UISearchBar!
     @IBOutlet weak var opcDisp: UISwitch!
     @IBOutlet weak var opcBusquedaA: UISwitch!
     @IBOutlet weak var lblAlert1: UILabel!
-    var Dispo = String()
+    @IBOutlet weak var busesp1: UILabel!
+    @IBOutlet weak var busesp2: UILabel!
+    var Dispo:String = "Si"
+    var Nombre = String()
+    var Autor = String()
+    var Editorial = String ()
+    var Edicion = String()
+    var be = Int()
     
+    @IBAction func opcDispA(_ sender: UISwitch) {
+        if(opcDisp.isOn){
+            Dispo = "Si"
+        }else{
+            Dispo = "No"
+        }
+    }
     @IBAction func opcBusqueda(_ sender: UISwitch) {
         if(opcBusquedaA.isOn){
             txtAutor.isHidden = false
@@ -28,11 +42,8 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
             lblDisp.isHidden = false
             opcDisp.isHidden = false
             texEdicion.isHidden = false
-            if(opcDisp.isOn){
-                Dispo = "Si"
-            }else{
-                Dispo = "No"
-            }
+            be = 1
+            
             
         }else{
             txtAutor.isHidden = true
@@ -40,28 +51,49 @@ class busquedaViewController: UIViewController, UITextFieldDelegate , UISearchBa
             lblDisp.isHidden = true
             opcDisp.isHidden = true
             texEdicion.isHidden = true
-            
+            be = 0
         }
     }
     @IBAction func btnBuscar(_ sender: Any) {
-        if (txtNombre.text != "" || txtAutor.text != "" || txtEditorial.text != "" || texEdicion.text != ""){
-            performSegue(withIdentifier: "Cbusqueda", sender: self)
-        }else{
-            lblAlert1.isHidden = false
+        
+        if (be == 1){
+            Nombre = txtNombre.text!
+            Autor = txtAutor.text!
+            Editorial = txtEditorial.text!
+            Edicion = texEdicion.text!
+            if(txtNombre.text != "" && txtAutor.text != "" && txtEditorial.text != "" && texEdicion.text != ""){
+                performSegue(withIdentifier: "Cbusqueda", sender: self)
+            }else{
+                busesp1.isHidden = false
+                busesp2.isHidden = false
+            }
+        }else if(be == 0){
+            Nombre = txtNombre.text!
+            if(txtNombre.text != ""){
+                performSegue(withIdentifier: "Cbusqueda", sender: self)
+            }else{
+                lblAlert1.isHidden = false
+            }
+            
         }
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var resultBusqueda = segue.destination as! ResultBusViewController
-        resultBusqueda.Nombre = txtNombre.text!
-        resultBusqueda.Autor = txtAutor.text!
-        resultBusqueda.Editorial = txtEditorial.text!
-        resultBusqueda.Autor = texEdicion.text!
+        resultBusqueda.Nombre = Nombre
+        resultBusqueda.Autor = Autor
+        resultBusqueda.Editorial = Editorial
+        resultBusqueda.Autor = Autor
         resultBusqueda.Disponibe = Dispo
+        resultBusqueda.Edicion = Edicion
+        resultBusqueda.be = be
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblAlert1.isHidden = true
+        busesp1.isHidden = true
+        busesp2.isHidden = true
         self.txtAutor.delegate = self
         self.txtEditorial.delegate = self
         self.texEdicion.delegate = self
